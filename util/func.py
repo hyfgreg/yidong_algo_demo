@@ -14,7 +14,7 @@ db = client.metro
 # method GET_SBWPLAN
 # 地铁站 matrix 获取出行方案
 # 示例：ss_plan=[['step1地铁上车站','step1地铁线路','step1地铁方向','step1地铁下车站'],['step2地铁上车站','step2地铁线路','step2地铁方向','step2地铁下车站']]
-def get_sbwplan(sbw_ostation, sbw_dstation):
+def get_sbwplan_prod(sbw_ostation, sbw_dstation):
     # print('sbw_o', sbw_ostation, 'sbw_d', sbw_dstation)
     sbw_ostation_list = db.stations.find_one({"id": sbw_ostation})
     sbw_dstation_list = db.stations.find_one({"id": sbw_dstation})
@@ -53,6 +53,8 @@ def get_sbwplan_dev(sbw_oid,sbw_did):
     duration=90 # 该方案的总时长，单位是 分钟
     plantype=True # 如果有两站间的方案，plantype为true，没有则false
     return plantype,duration,ss_plan
+
+get_sbwplan = get_sbwplan_dev
 
 from util.data import ydline, ydstation, stationTime, sbwstation
 
