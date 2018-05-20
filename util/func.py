@@ -29,10 +29,9 @@ def get_sbwplan_prod(sbw_ostation, sbw_dstation):
         duration = int(transit['duration'])/60
         segment_list = transit['segments']
         ss_plan = []
-
-        for segment in segment_list:
+        for i,segment in enumerate(segment_list):
             try:
-                ss_plan.append({0: {'上车站点': segment['bus']['buslines'][0]['departure_stop']['name'],
+                ss_plan.append({i: {'上车站点': segment['bus']['buslines'][0]['departure_stop']['name'],
                                     '线路': segment['bus']['buslines'][0]['name'],
                                     '线路方向': segment['bus']['buslines'][0]['final_station'],
                                     '下车站点': segment['bus']['buslines'][0]['arrival_stop']['name']}})
