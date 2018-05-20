@@ -600,41 +600,80 @@ def plan_trip(o_lat, o_lng, d_lat, d_lng, o_time):
     return None
 
 
-if __name__ == '__main__':
-    # # o-柏林映象周边，d-安亭新镇周边
-    # # 驿动内直达换乘
-    # o_lat = 31.2712
-    # o_lng = 121.178615
-    # d_lat = 31.277159
-    # d_lng = 121.175772
-    # o_time = '07:10'
-    # otime = datetime.datetime.strptime(o_time, '%H:%M')
-    # os, ds = get_odstops(o_lat, o_lng, d_lat, d_lng)
-    # print(plan_yd_yd_trip(os, ds, otime))
-
-    # o-柏林映象周边，d-中山公园周边
-    # 驿动内一次换乘
-    # o_lat = 31.2712
-    # o_lng = 121.178615
-    # d_lat = 31.22415
-    # d_lng = 121.424639
-    # o_time = '07:10'
-    # print(plan_trip(o_lat, o_lng, d_lat, d_lng, o_time))
-
-    # o-柏林映象周边，d-中山公园周边
-    # 驿动换乘地铁，该类方案的总时长合理性需要利用 百度api 获取到公交出行的时间进行判断，如果长于两地直接公交，那么方案需剔除
-    # o_lat = 31.2712
-    # o_lng = 121.178615
-    # d_lat = 31.22415
-    # d_lng = 121.424639
-    # o_time = '07:30'
-    # print(plan_trip(o_lat, o_lng, d_lat, d_lng, o_time))
-
-    # # o-中山公园周边，d-安亭新镇周边
-    # # 地铁换乘驿动，该类方案的总时长合理性需要利用 百度api 获取到公交出行的时间进行判断，如果长于两地直接公交，那么方案需剔除
-    o_lat = 31.22415
-    o_lng = 121.424639
-    d_lat = 31.277159
-    d_lng = 121.175772
-    o_time = '16:50'
-    print(plan_trip(o_lat, o_lng, d_lat, d_lng, o_time))
+# if __name__ == '__main__':
+#     # # o-柏林映象周边，d-安亭新镇周边
+#     # # 驿动内直达换乘
+#     # o_lat=31.2712
+#     # o_lng=121.178615
+#     # d_lat=31.277159
+#     # d_lng=121.175772
+#     # o_time='07:10'
+#     # otime = datetime.datetime.strptime(o_time,'%H:%M')
+#     # os,ds=get_odstops(o_lat,o_lng,d_lat,d_lng)
+#     # plan_yd_yd_trip(os,ds,otime)
+#     #
+#     #
+#     # # In[670]:
+#     #
+#     #
+#     # # o-柏林映象周边，d-中山公园周边
+#     # # 驿动内一次换乘
+#     # o_lat=31.2712
+#     # o_lng=121.178615
+#     # d_lat=31.22415
+#     # d_lng=121.424639
+#     # o_time='07:10'
+#     # plan_trip(o_lat,o_lng,d_lat,d_lng,o_time)
+#
+#
+#     # In[684]:
+#
+#
+#     # o-柏林映象周边，d-中山公园周边
+#     # 驿动换乘地铁，该类方案的总时长合理性需要利用 百度api 获取到公交出行的时间进行判断，如果长于两地直接公交，那么方案需剔除
+#     # o_lat=31.2712
+#     # o_lng=121.178615
+#     # d_lat=31.22415
+#     # d_lng=121.424639
+#     # o_time='07:30'
+#     # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
+#
+#
+#     # In[687]:
+#
+#
+#     # # o-中山公园周边，d-安亭新镇周边
+#     # # 地铁换乘驿动，该类方案的总时长合理性需要利用 百度api 获取到公交出行的时间进行判断，如果长于两地直接公交，那么方案需剔除
+#     o_lat=31.22415
+#     o_lng=121.424639
+#     d_lat=31.277159
+#     d_lng=121.175772
+#     o_time='16:50'
+#     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
+#     #
+#     #
+#     # # In[686]:
+#     #
+#     #
+#     # # 测试用例3-驿动内两次换乘，加上时间约束后没有找到合适的测试用例，仅调用显示路径可行解
+#     # o_sname='奥托立夫,1'
+#     # d_sname='柏林映象,0'
+#     # yd_yd_plan(o_sname,d_sname)
+#     #
+#     #
+#     # # In[650]:
+#     #
+#     #
+#     # # 测试用例2--驿动内一次换乘，加上时间约束后没有找到合适的测试用例，仅调用显示路径可行解
+#     # o_sname='柏林映象,0'
+#     # d_sname='中山公园,0'
+#     # yd_yd_plan(o_sname,d_sname)
+#     #
+#     #
+#     # # In[651]:
+#     #
+#     #
+#     # # 测试用例1-驿动内直达，加上时间约束后没有找到合适的测试用例，仅调用显示路径可行解
+#     # o_sname='柏林映象,0'
+#     # d_sname='安亭新镇,1'
+#     # yd_yd_plan(o_sname,d_sname)
