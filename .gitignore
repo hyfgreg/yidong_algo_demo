@@ -1,0 +1,6 @@
+# no .json files
+#*.json
+
+# no idea dir
+.idea/
+.venv/
