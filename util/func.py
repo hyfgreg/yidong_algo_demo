@@ -377,67 +377,70 @@ def out_put_yd_trip(otime, plantype, plans, o_wt=0, d_wt=0):
 
 
 # 查找驿动直达及一次换乘内站点周边的地铁站，获取与已知地铁站间的出行方案
-def yd_sbw_plan(os_name, o_type, ds_name, d_type):
-    if o_type == 0 and d_type == 1:
-        o_nstops = get_nearby_stops([os_name])
+def yd_sbw_plan(os_name,o_type,ds_name,d_type):
+    if o_type==0 and d_type==1:
+        o_nstops=get_nearby_stops([os_name])
         o_nstops.append(os_name)
-        yline0 = get_lines_by_stops(o_nstops)
-        sbw_s = ds_name
-    elif o_type == 1 and d_type == 0:
-        d_nstops = get_nearby_stops([ds_name])
+        yline0=get_lines_by_stops(o_nstops)
+        sbw_s=ds_name
+    elif o_type==1 and d_type==0:
+        d_nstops=get_nearby_stops([ds_name])
         d_nstops.append(ds_name)
-        yline0 = get_lines_by_stops(d_nstops)
-        sbw_s = os_name
+        yline0=get_lines_by_stops(d_nstops)
+        sbw_s=os_name
     # 获取给定驿动站点的直达站点集
-    ystation0 = get_stops_by_lines(yline0)
-    nearby_stops = get_nearby_stops(ystation0)
+    ystation0=get_stops_by_lines(yline0)
+    nearby_stops=get_nearby_stops(ystation0)
     ystation0.extend(nearby_stops)
-    ystation0 = list({}.fromkeys(ystation0).keys())
+    ystation0=list({}.fromkeys(ystation0).keys())
     # 获取给定驿动站点的直达和一次换乘站点集
-    yline1 = get_lines_by_stops(ystation0)
-    ystation1 = get_stops_by_lines(yline1)
-    nearby_stops = get_nearby_stops(ystation1)
+    yline1=get_lines_by_stops(ystation0)
+    ystation1=get_stops_by_lines(yline1)
+    nearby_stops=get_nearby_stops(ystation1)
     ystation1.extend(nearby_stops)
-    ystation1 = list({}.fromkeys(ystation1).keys())
+    ystation1=list({}.fromkeys(ystation1).keys())
     # 获取上述站点周边地铁站
-    nearby_sbws = {}
+    nearby_sbws={}
     for ys in ystation1:
         for sbws in ydstation[ys].get_stops()[1]:
-            nearby_sbws[sbws] = []
+            nearby_sbws[sbws]=[]
     for ys in ystation1:
         for sbws in ydstation[ys].get_stops()[1]:
             nearby_sbws[sbws].append(ys)
     # 获取周边地铁站与给定地铁站间的出行方案ss_plan
-    tsf_plans = []
-    ss_plans = []
-    for sbws in list(nearby_sbws.keys()):
-        if o_type == 0 and d_type == 1:
-            plantype, duration, ss_plan = get_sbwplan(sbws, sbw_s)
-            if plantype == False:
+    tsf_plans=[]
+    ss_plans=[]
+    nearbysbw=list(nearby_sbws.keys())
+    if sbw_s in nearbysbw:
+        nearbysbw.remove(sbw_s)
+    for sbws in nearbysbw:
+        if o_type==0 and d_type==1:
+            plantype,duration,ss_plan=get_sbwplan(sbws,sbw_s)
+            if plantype==False:
                 continue
-            tsf_ydstop = nearby_sbws[sbws]
+            tsf_ydstop=nearby_sbws[sbws]
             for ys in tsf_ydstop:
-                if os_name == ys:
+                if os_name==ys:
                     continue
-                ypt, ydplans = yd_yd_plan(os_name, ys)
-        elif o_type == 1 and d_type == 0:
-            plantype, duration, ss_plan = get_sbwplan(sbws, sbw_s)
-            if plantype == False:
+                ypt,ydplans=yd_yd_plan(os_name,ys)
+        elif o_type==1 and d_type==0:
+            plantype,duration,ss_plan=get_sbwplan(sbw_s,sbws)
+            if plantype==False:
                 continue
-            tsf_ydstop = nearby_sbws[sbws]
+            tsf_ydstop=nearby_sbws[sbws]
             for ys in tsf_ydstop:
-                if ds_name == ys:
+                if ds_name==ys:
                     continue
-                ypt, ydplans = yd_yd_plan(ys, ds_name)
+                ypt,ydplans=yd_yd_plan(ys,ds_name)
         for p in ydplans:
-            plan = []
-            plan.append([ypt, [p]])
-            plan.append([duration, ss_plan])
+            plan=[]
+            plan.append([ypt,[p]])
+            plan.append([duration,ss_plan])
             tsf_plans.append(plan)
     # 输出驿动站点与给定地铁站间的出行方案tsf_plan
-    if len(tsf_plans) == 0:
-        return -2, None
-    return 3, tsf_plans
+    if len(tsf_plans)==0:
+        return -2,None
+    return 3,tsf_plans
 
 
 # In[637]:
