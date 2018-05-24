@@ -2,7 +2,7 @@ import copy
 import datetime
 import operator
 import pymongo
-from util.common_func import get_distance, get_area
+from util_v_0_1.common_func import get_distance, get_area
 
 # import asyncio
 
@@ -53,9 +53,9 @@ def get_sbwplan_dev(sbw_oid,sbw_did):
     plantype=True # 如果有两站间的方案，plantype为true，没有则false
     return plantype,duration,ss_plan
 
-get_sbwplan = get_sbwplan_dev
+get_sbwplan = get_sbwplan_prod
 
-from util.data import ydline, ydstation, stationTime, sbwstation
+from util_v_0_1.data import ydline, ydstation, stationTime, sbwstation
 
 
 # 获取经过站点集的所有线路的集合

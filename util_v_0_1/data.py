@@ -2,8 +2,8 @@ import datetime
 import json
 import os
 import copy
-from util.yd_class import Station,Line
-from util.common_func import get_area,get_distance
+from util_v_0_1.yd_class import Station,Line
+from util_v_0_1.common_func import get_area,get_distance
 
 base_folder = '/home/hyfgreg/PycharmProjects/yidong_algo'
 

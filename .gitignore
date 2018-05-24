@@ -3,4 +3,4 @@
 
 # no idea dir
 .idea/
-.venv/
+venv/
