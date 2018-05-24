@@ -2,7 +2,7 @@ import copy
 import datetime
 import operator
 import pymongo
-from util_v_0_1.common_func import get_distance, get_area
+from util_v_0_2.common_func import get_distance, get_area
 
 # import asyncio
 
