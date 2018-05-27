@@ -1,7 +1,9 @@
 from . import api
 from flask import request,jsonify,url_for,redirect
-from flask_request_params import bind_request_params
-from util_v_0_2.func import plan_trip as pt
+# from flask_request_params import bind_request_params
+from util_v_0_4.func import plan_trip as pt
+# from config import Config_dev
+
 
 @api.route('/')
 def test():
@@ -22,6 +24,7 @@ def plan_trip():
     try:
         membertype = int(params['memvertype'])
     except KeyError:
+        # 默认使用0
         membertype = 0
 
     trip = pt(o_lat, o_lng, d_lat, d_lng, otime)

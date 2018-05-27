@@ -1,7 +1,9 @@
-from util_v_0_2.func import plan_trip
+from util_v_0_3.func import plan_trip
 
 
 if __name__ == '__main__':
+
+
     # o-柏林映象周边，d-安亭新镇周边
     # 驿动内直达换乘
     o_lat=31.2712
@@ -65,4 +67,4 @@ if __name__ == '__main__':
     d_lat=31.277159
     d_lng=121.175772
     o_time='16:50'
-    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
+    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
