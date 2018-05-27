@@ -1,6 +1,10 @@
 # no .json files
 #*.json
+*.pyc
 
 # no idea dir
 .idea/
 venv/
+
+# no pycache dir
+__pycache__/

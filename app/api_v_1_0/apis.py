@@ -29,10 +29,10 @@ def plan_trip():
 
     trip = pt(o_lat, o_lng, d_lat, d_lng, otime)
     print(trip)
-    result = {'status':0,'result':trip}
+    result = {'status':1,'result':trip}
     return jsonify(result)
 
 @api.route('/lack_args')
 def lack_args():
-    result = {'status':1,'result':'缺少参数'}
+    result = {'status':0,'result':'缺少参数'}
     return jsonify(result)
