@@ -1,0 +1,5 @@
+2018-05-27 21:03:19,223 - ERROR - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-05-27 21:05:49,472 - ERROR - 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-05-27 21:10:16,915 - ERROR - 'str' object is not callable
+2018-05-27 21:16:38,633 - ERROR - 'str' object is not callable
+2018-05-27 21:17:01,084 - ERROR - url: http://127.0.0.1:8000/dd - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.

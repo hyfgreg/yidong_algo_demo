@@ -1,4 +1,4 @@
-from util_v_0_3.func import plan_trip
+from util_v_0_4.func import plan_trip
 
 
 if __name__ == '__main__':
@@ -12,7 +12,7 @@ if __name__ == '__main__':
     d_lng=121.175772
     o_time='07:10'
     membertype=0
-    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
+    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
     # # In[52]:
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:30'
     membertype=1
-    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
+    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
     # # In[53]:
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:10'
     membertype=2
-    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
+    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
     # # In[54]:
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:20'
     membertype=2
-    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
+    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
     # # In[55]:
@@ -67,4 +67,4 @@ if __name__ == '__main__':
     d_lat=31.277159
     d_lng=121.175772
     o_time='16:50'
-    # print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
+    print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))

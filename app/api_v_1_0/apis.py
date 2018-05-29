@@ -1,12 +1,15 @@
 from . import api
-from flask import request,jsonify,url_for,redirect
+from flask import request, jsonify, url_for, redirect, current_app
 # from flask_request_params import bind_request_params
-from util_v_0_4.func import plan_trip as pt
+from util_v_0_5.func import plan_trip as pt
 # from config import Config_dev
+from mylogger.mylogger import mylogger
 
 
 @api.route('/')
 def test():
+    # mylogger.info('test')
+    # mylogger.error('test')
     return jsonify({'hello':'world'})
 
 @api.route('/plan_trip')
@@ -22,17 +25,26 @@ def plan_trip():
     except KeyError:
         return redirect(url_for('api.lack_args'))
     try:
-        membertype = int(params['memvertype'])
+        membertype = int(params['membertype'])
     except KeyError:
         # 默认使用0
         membertype = 0
 
+    # mylogger.info()
+
     trip = pt(o_lat, o_lng, d_lat, d_lng, otime)
-    print(trip)
-    result = {'status':1,'result':trip}
+    # print(trip)
+    mytrip = {}
+    mytrip['trip'] = trip[0]
+    mytrip['no_trip_reason'] = trip[1]['no_trip_reason']
+    result = {'status':1,'result':mytrip,'info':'ok'}
+
+    message = 'from: {},{} - to: {},{} - time: {} - trip: {}'.format(o_lat,o_lng,d_lat,d_lng,otime,mytrip)
+    mylogger.info(message)
+
     return jsonify(result)
 
 @api.route('/lack_args')
 def lack_args():
-    result = {'status':0,'result':'缺少参数'}
+    result = {'status':0,'result':'','info':'缺少参数'}
     return jsonify(result)

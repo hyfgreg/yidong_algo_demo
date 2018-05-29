@@ -927,7 +927,3 @@ def plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype=0):
                 trips['subwayPlan']=[False,trip4]
     return sort_trips_by_time(trips)
 
-
-
-
-

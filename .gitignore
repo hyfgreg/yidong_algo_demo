@@ -4,7 +4,7 @@
 
 # no idea dir
 .idea/
-venv/
+#venv/
 
 # no pycache dir
 __pycache__/
