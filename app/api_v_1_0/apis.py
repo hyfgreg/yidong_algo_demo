@@ -33,11 +33,8 @@ def plan_trip():
     # mylogger.info()
 
     trip = pt(o_lat, o_lng, d_lat, d_lng, otime)
-    # print(trip)
-    mytrip = {}
-    mytrip['trip'] = trip[0]
-    mytrip['no_trip_reason'] = trip[1]['no_trip_reason']
-    result = {'status':1,'result':mytrip,'info':'ok'}
+
+    result = {'status':1,'result':trip,'info':'ok'}
 
     message = 'from: {},{} - to: {},{} - time: {}'.format(o_lat,o_lng,d_lat,d_lng,otime)
     mylogger.info(message)
