@@ -39,7 +39,7 @@ def plan_trip():
     mytrip['no_trip_reason'] = trip[1]['no_trip_reason']
     result = {'status':1,'result':mytrip,'info':'ok'}
 
-    message = 'from: {},{} - to: {},{} - time: {} - trip: {}'.format(o_lat,o_lng,d_lat,d_lng,otime,mytrip)
+    message = 'from: {},{} - to: {},{} - time: {}'.format(o_lat,o_lng,d_lat,d_lng,otime)
     mylogger.info(message)
 
     return jsonify(result)

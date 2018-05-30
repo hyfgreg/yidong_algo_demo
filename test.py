@@ -1,5 +1,6 @@
-from util_v_0_4.func import plan_trip
-
+from util_v_0_6.func import plan_trip
+url = 'http://115.28.153.0/plan_trip?o_lat={}&o_lng={}&d_lat={}&d_lng={}&otime={}&membertype={}'
+import requests
 
 if __name__ == '__main__':
 
@@ -12,6 +13,11 @@ if __name__ == '__main__':
     d_lng=121.175772
     o_time='07:10'
     membertype=0
+    # url1 = url.format(o_lat,o_lng,d_lat,d_lng,o_time,membertype)
+    # print(url1)
+    # resp = requests.get(url1)
+    # print(resp.text)
+
     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
@@ -26,6 +32,10 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:30'
     membertype=1
+    # url2 = url.format(o_lat, o_lng, d_lat, d_lng, o_time, membertype)
+    # print(url2)
+    # resp = requests.get(url2)
+    # print(resp.text)
     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
@@ -40,6 +50,10 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:10'
     membertype=2
+    # url3 = url.format(o_lat, o_lng, d_lat, d_lng, o_time, membertype)
+    # print(url3)
+    # resp = requests.get(url3)
+    # print(resp.text)
     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
@@ -54,6 +68,10 @@ if __name__ == '__main__':
     d_lng=121.424639
     o_time='07:20'
     membertype=2
+    # url4 = url.format(o_lat, o_lng, d_lat, d_lng, o_time, membertype)
+    # print(url4)
+    # resp = requests.get(url4)
+    # print(resp.text)
     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time,membertype))
     #
     #
@@ -67,4 +85,8 @@ if __name__ == '__main__':
     d_lat=31.277159
     d_lng=121.175772
     o_time='16:50'
+    # url5 = url.format(o_lat, o_lng, d_lat, d_lng, o_time, membertype)
+    # print(url5)
+    # resp = requests.get(url5)
+    # print(resp.text)
     print(plan_trip(o_lat,o_lng,d_lat,d_lng,o_time))
