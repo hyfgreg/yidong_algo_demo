@@ -6,3 +6,5 @@
 2018-05-29 22:54:29,256 - ERROR - url: http://127.0.0.1:8000/favicon.ico - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
 2018-05-29 22:54:29,259 - ERROR - url: http://127.0.0.1:8000/favicon.ico - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
 2018-05-29 22:57:48,544 - ERROR - url: http://127.0.0.1:8000/plaen_trip?o_lat=31.22415&o_lng=121.424639&d_lat=31.277159&d_lng=121.175772&otime=16:50 - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-05-31 00:19:01,613 - ERROR - url: http://127.0.0.1:8000/favicon.ico - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+2018-05-31 00:19:01,619 - ERROR - url: http://127.0.0.1:8000/favicon.ico - error: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.

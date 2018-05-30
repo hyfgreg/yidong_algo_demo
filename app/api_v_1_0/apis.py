@@ -1,7 +1,7 @@
 from . import api
 from flask import request, jsonify, url_for, redirect, current_app
 # from flask_request_params import bind_request_params
-from util_v_0_6.func import plan_trip as pt
+# from util_v_0_6.func import plan_trip as pt
 # from config import Config_dev
 from mylogger.mylogger import mylogger
 
@@ -32,7 +32,7 @@ def plan_trip():
 
     # mylogger.info()
 
-    trip = pt(o_lat, o_lng, d_lat, d_lng, otime)
+    trip = current_app.algo.plan_trip(o_lat, o_lng, d_lat, d_lng, otime)
 
     result = {'status':1,'result':trip,'info':'ok'}
 
