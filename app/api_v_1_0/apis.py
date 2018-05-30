@@ -1,7 +1,7 @@
 from . import api
 from flask import request, jsonify, url_for, redirect, current_app
 # from flask_request_params import bind_request_params
-from util_v_0_4.func import plan_trip as pt
+from util_v_0_6.func import plan_trip as pt
 # from config import Config_dev
 from mylogger.mylogger import mylogger
 
