@@ -2,7 +2,6 @@ import logging
 from util_v_0_6.yidong_algo import YidongAlgo
 from flask import Flask
 from flask_request_params import bind_request_params
-from config import Config_dev
 
 def create_app():
     app = Flask(__name__)

@@ -6,3 +6,60 @@
 2018-05-31 00:20:09,785 - INFO - from: 31.2712,121.178615 - to: 31.22415,121.424639 - time: 07:10
 2018-05-31 00:20:09,888 - INFO - from: 31.29188,121.22063 - to: 31.22415,121.424639 - time: 07:20
 2018-05-31 00:20:09,986 - INFO - from: 31.22415,121.424639 - to: 31.277159,121.175772 - time: 16:50
+2018-05-31 22:30:40,608 - INFO - from: 31.2712,121.178615 - to: 31.277159,121.175772 - time: 07:10
+2018-05-31 22:30:45,869 - INFO - from: 31.277159,121.175772 - to: 31.22415,121.424639 - time: 07:30
+2018-05-31 22:30:45,979 - INFO - from: 31.2712,121.178615 - to: 31.22415,121.424639 - time: 07:10
+2018-05-31 22:30:46,066 - INFO - from: 31.29188,121.22063 - to: 31.22415,121.424639 - time: 07:20
+2018-05-31 22:30:46,754 - INFO - from: 31.22415,121.424639 - to: 31.277159,121.175772 - time: 16:50
+2018-05-31 22:32:40,735 - INFO - 载入数据2018-05-31
+2018-05-31 22:32:41,069 - INFO - 载入数据2018-05-31
+2018-05-31 22:32:41,235 - INFO - 载入数据2018-05-31
+2018-05-31 22:32:41,243 - INFO - 载入数据2018-05-31
+2018-05-31 22:33:11,470 - INFO - 载入数据2018-05-31
+2018-05-31 22:33:11,471 - INFO - 载入数据2018-05-31
+2018-05-31 22:33:11,702 - INFO - 载入数据2018-05-31
+2018-05-31 22:33:11,766 - INFO - 载入数据2018-05-31
+2018-05-31 22:33:11,775 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:02,397 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:03,764 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:04,072 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:04,208 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:04,283 - INFO - 载入数据2018-05-31
+2018-05-31 22:34:07,172 - INFO - from: 31.2712,121.178615 - to: 31.277159,121.175772 - time: 07:10
+2018-05-31 22:34:07,411 - INFO - from: 31.277159,121.175772 - to: 31.22415,121.424639 - time: 07:30
+2018-05-31 22:34:07,561 - INFO - from: 31.2712,121.178615 - to: 31.22415,121.424639 - time: 07:10
+2018-05-31 22:34:07,790 - INFO - from: 31.29188,121.22063 - to: 31.22415,121.424639 - time: 07:20
+2018-05-31 22:34:07,977 - INFO - from: 31.22415,121.424639 - to: 31.277159,121.175772 - time: 16:50
+2018-05-31 23:00:06,743 - INFO - 载入数据2018-05-31
+2018-05-31 23:00:06,745 - INFO - from: 31.2712,121.178615 - to: 31.277159,121.175772 - time: 07:10
+2018-05-31 23:00:06,802 - INFO - from: 31.277159,121.175772 - to: 31.22415,121.424639 - time: 07:30
+2018-05-31 23:00:06,873 - INFO - from: 31.2712,121.178615 - to: 31.22415,121.424639 - time: 07:10
+2018-05-31 23:00:07,536 - INFO - 载入数据2018-05-31
+2018-05-31 23:00:07,587 - INFO - from: 31.29188,121.22063 - to: 31.22415,121.424639 - time: 07:20
+2018-05-31 23:00:08,337 - INFO - 载入数据2018-05-31
+2018-05-31 23:00:08,385 - INFO - from: 31.22415,121.424639 - to: 31.277159,121.175772 - time: 16:50
+2018-05-31 23:04:14,887 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeListSet2018-05-31.json
+2018-05-31 23:04:14,933 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationList2018-05-31.json
+2018-05-31 23:04:15,014 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationTime2018-05-31.json
+2018-05-31 23:04:15,046 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/busSchedule2018-05-31.json
+2018-05-31 23:04:15,067 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeListSet2018-05-31.json
+2018-05-31 23:04:15,100 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeListSet2018-05-31.json
+2018-05-31 23:04:15,114 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationList2018-05-31.json
+2018-05-31 23:04:15,148 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationList2018-05-31.json
+2018-05-31 23:04:15,161 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeListSet2018-05-31.json
+2018-05-31 23:04:15,181 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationTime2018-05-31.json
+2018-05-31 23:04:15,191 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationList2018-05-31.json
+2018-05-31 23:04:15,215 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/busSchedule2018-05-31.json
+2018-05-31 23:04:15,219 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationTime2018-05-31.json
+2018-05-31 23:04:15,234 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationTime2018-05-31.json
+2018-05-31 23:04:15,249 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/busSchedule2018-05-31.json
+2018-05-31 23:04:15,257 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/busSchedule2018-05-31.json
+2018-05-31 23:04:15,553 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeListSet2018-05-31.json
+2018-05-31 23:04:15,600 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationList2018-05-31.json
+2018-05-31 23:04:15,674 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/routeStationTime2018-05-31.json
+2018-05-31 23:04:15,720 - INFO - 载入数据/home/hyfgreg/yidong_algo_demo/data/busSchedule2018-05-31.json
+2018-05-31 23:04:16,480 - INFO - 载入数据2018-05-31
+2018-05-31 23:04:16,505 - INFO - 载入数据2018-05-31
+2018-05-31 23:04:16,715 - INFO - 载入数据2018-05-31
+2018-05-31 23:04:16,725 - INFO - 载入数据2018-05-31
+2018-05-31 23:04:16,866 - INFO - 载入数据2018-05-31

@@ -4,18 +4,27 @@ import operator
 import datetime
 from config import Config_dev
 from .data_new import data_init
+from mylogger.mylogger import mylogger
 
 
 class YidongAlgo(object):
     def __init__(self):
+        self.day_of_data = datetime.date.today()
+        self.data_ready = False
         self.init_set()
 
     @classmethod
     def init(cls,app):
         app.algo = cls()
 
-    def init_set(self):
-        self.ydline, self.ydstation, self.stationTime, self.sbwstation, self.sbwtime, self.sbwline, self.busSchedule = data_init()
+    def init_set(self,day=datetime.date.today()):
+        try:
+            self.ydline, self.ydstation, self.stationTime, self.sbwstation, self.sbwtime, self.sbwline, self.busSchedule = data_init(day)
+            self.data_ready = True
+            mylogger.info('载入数据{}'.format(day))
+        except FileNotFoundError:
+            mylogger.error(message='驿动数据缺失！{}数据缺失，请更新！{}'.format(day,'init_set'))
+            self.data_ready = False
 
     def update_data(self):
         self.init_set()
