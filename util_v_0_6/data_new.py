@@ -10,28 +10,28 @@ from mylogger.mylogger import mylogger
 
 def data_init(day_of_data=datetime.date.today()):
     # 读取线路列表的json文件
-    with open(Config_dev.base_folder + '/routeListSet/routeListSet{}.json'.format(day_of_data), 'r',
+    with open(Config_dev.base_folder_yidong + '/routeListSet/routeListSet{}.json'.format(day_of_data), 'r',
               encoding='utf-8') as f:
         ldata = json.loads(f.read())
-    mylogger.info('载入数据{}'.format(Config_dev.base_folder + '/routeListSet/routeListSet{}.json'.format(day_of_data)))
+    mylogger.info('载入数据{}'.format(Config_dev.base_folder_yidong + '/routeListSet/routeListSet{}.json'.format(day_of_data)))
 
     # 读取站点列表的json文件
-    with open(Config_dev.base_folder + '/routeStationList/routeStationList{}.json'.format(day_of_data), 'r',
+    with open(Config_dev.base_folder_yidong + '/routeStationList/routeStationList{}.json'.format(day_of_data), 'r',
               encoding='utf-8') as f:
         sdata = json.loads(f.read())
-    mylogger.info('载入数据{}'.format(Config_dev.base_folder + '/routeStationList/routeStationList{}.json'.format(day_of_data)))
+    mylogger.info('载入数据{}'.format(Config_dev.base_folder_yidong + '/routeStationList/routeStationList{}.json'.format(day_of_data)))
 
     # 读取各站时刻表的json文件
-    with open(Config_dev.base_folder + '/routeStationTime/routeStationTime{}.json'.format(day_of_data), 'r',
+    with open(Config_dev.base_folder_yidong + '/routeStationTime/routeStationTime{}.json'.format(day_of_data), 'r',
               encoding='utf-8') as f:
         tdata = json.loads(f.read())
-    mylogger.info('载入数据{}'.format(Config_dev.base_folder + '/routeStationTime/routeStationTime{}.json'.format(day_of_data)))
+    mylogger.info('载入数据{}'.format(Config_dev.base_folder_yidong + '/routeStationTime/routeStationTime{}.json'.format(day_of_data)))
 
     # 读取排班表的json文件
-    with open(Config_dev.base_folder + '/busSchedule/busSchedule{}.json'.format(day_of_data), 'r',
+    with open(Config_dev.base_folder_yidong + '/busSchedule/busSchedule{}.json'.format(day_of_data), 'r',
               encoding='utf-8') as f:
         bdata = json.loads(f.read())
-    mylogger.info('载入数据{}'.format(Config_dev.base_folder + '/busSchedule/busSchedule{}.json'.format(day_of_data)))
+    mylogger.info('载入数据{}'.format(Config_dev.base_folder_yidong + '/busSchedule/busSchedule{}.json'.format(day_of_data)))
 
     # 读取地铁站点列表的json文件
     sbw_sdata = []

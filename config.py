@@ -16,4 +16,4 @@ class Config(object):
 
 class Config_dev(Config):
     day_of_data = '2018-05-29'
-    base_folder = '/home/yidong_linux/yidong_linux/data'
+    base_folder_yidong = '/home/yidong_linux/yidong_linux/data'
