@@ -10,7 +10,9 @@ from config import Config_dev
 from mylogger.mylogger import mylogger
 
 
-def data_init(day_of_data=datetime.date.today()):
+def data_init(day_of_data=None):
+    if day_of_data is None:
+        day_of_data = datetime.date.today()
     # 读取线路列表的json文件
     with open(Config_dev.base_folder_yidong + '/routeListSet/routeListSet{}.json'.format(day_of_data), 'r',
               encoding='utf-8') as f:
