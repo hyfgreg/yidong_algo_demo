@@ -17,7 +17,9 @@ class YidongAlgo(object):
     def init(cls,app):
         app.algo = cls()
 
-    def init_set(self,day=datetime.date.today()):
+    def init_set(self,day=None):
+        if day is None:
+            day = datetime.date.today()
         try:
             self.ydline, self.ydstation, self.stationTime, self.sbwstation, self.sbwtime, self.sbwline, self.busSchedule = data_init(day)
             self.data_ready = True
