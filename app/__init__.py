@@ -1,7 +1,12 @@
 import logging
-from util_v_0_6.yidong_algo import YidongAlgo
+
 from flask import Flask
 from flask_request_params import bind_request_params
+
+from util_v_0_6.yidong_algo import YidongAlgo
+from util_v_0_6.evcard import Evcard
+
+
 
 def create_app():
     app = Flask(__name__)
@@ -13,4 +18,5 @@ def create_app():
     app.register_blueprint(api_v_1_0_blueprint)
 
     YidongAlgo.init(app)
+    Evcard.init(app)
     return app

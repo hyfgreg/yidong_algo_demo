@@ -110,6 +110,67 @@ def plan_trip():
 
     return jsonify(result)
 
+@api.route('/plan_trip_evcard')
+def plan_trip_evcard():
+    params = request.params
+    try:
+        o_lng = float(params['o_lng'])
+        o_lat = float(params['o_lat'])
+        d_lng = float(params['d_lng'])
+        d_lat = float(params['d_lat'])
+        otime = params['otime']
+        # membertype = int(params['membertype'])
+    except KeyError:
+        return redirect(url_for('api.lack_args'))
+    try:
+        membertype = int(params['membertype'])
+    except KeyError:
+        # 默认使用0
+        membertype = 0
+
+    # mylogger.info()
+
+    trip = current_app.evcard_algo.plan_trip(o_lat, o_lng)
+
+    result = {'status':1,'result':trip,'info':'ok'}
+
+    message = 'from: {},{} - to: {},{} - time: {}'.format(o_lat,o_lng,d_lat,d_lng,otime)
+    mylogger.info(message)
+
+    return jsonify(result)
+
+@api.route('/plan_trip_all')
+def plan_trip_all():
+    params = request.params
+    try:
+        o_lng = float(params['o_lng'])
+        o_lat = float(params['o_lat'])
+        d_lng = float(params['d_lng'])
+        d_lat = float(params['d_lat'])
+        otime = params['otime']
+        # membertype = int(params['membertype'])
+    except KeyError:
+        return redirect(url_for('api.lack_args'))
+    try:
+        membertype = int(params['membertype'])
+    except KeyError:
+        # 默认使用0
+        membertype = 0
+
+    # mylogger.info()
+
+    trip = current_app.algo.plan_trip(o_lat, o_lng, d_lat, d_lng, otime)
+    trip_2 = current_app.evcard_algo.plan_trip(o_lat, o_lng)
+
+    ret = {'edbus_subway':trip,'evcard':trip_2}
+
+    result = {'status':1,'result':ret,'info':'ok'}
+
+    message = 'from: {},{} - to: {},{} - time: {}'.format(o_lat,o_lng,d_lat,d_lng,otime)
+    mylogger.info(message)
+
+    return jsonify(result)
+
 @api.route('/lack_args')
 def lack_args():
     result = {'status':0,'result':'','info':'缺少参数'}
