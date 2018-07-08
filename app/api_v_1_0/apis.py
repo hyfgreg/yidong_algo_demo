@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from . import api
 from flask import request, jsonify, url_for, redirect, current_app,abort
 import datetime

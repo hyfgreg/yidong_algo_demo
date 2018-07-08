@@ -8,3 +8,6 @@
 
 # no pycache dir
 __pycache__/
+
+*.log
+test.py
