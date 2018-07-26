@@ -236,7 +236,7 @@ def data_init(day_of_data=None):
                     sts = {}
                     for i in range(len(tdata[key][k][c])):
                         id = tdata[key][k][c][i]['stationFlag']
-                        timeStr = tdata[key][k][c][i]['time'].strip().replace('：', ':')
+                        timeStr = tdata[key][k][c][i]['time'].strip().replace(';', ':')
                         if timeStr != '':
                             t = datetime.datetime.strptime(timeStr, '%H:%M')
                             sts[id] = t
