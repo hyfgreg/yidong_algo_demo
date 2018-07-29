@@ -44,21 +44,28 @@ class YidongAlgo(object):
         find_route = Config_dev.db.mt.find_one({"origin": sbw_ostation, "destination": sbw_dstation})
         # print(find_route)
         if find_route is not None:
-            plantype = True
-            transit = find_route['transits'][0]
-            duration = int(transit['duration']) / 60
-            price = float(transit['cost'])
-            segment_list = transit['segments']
-            ss_plan = []
+            if bool(find_route['transits']) is False:
+                plantype = False
+                duration = 1000000
+                ss_plan = None
+                price = 1000000
+                mylogger.info('No Information: {} to {}'.format(sbw_ostation, sbw_dstation))
+            else:
+                plantype = True
+                transit = find_route['transits'][0]
+                duration = int(transit['duration']) / 60
+                price = float(transit['cost'])
+                segment_list = transit['segments']
+                ss_plan = []
 
-            for segment in segment_list:
-                try:
-                    ss_plan.append([segment['bus']['buslines'][0]['departure_stop']['name'],
-                                    segment['bus']['buslines'][0]['name'],
-                                    '往' + segment['bus']['buslines'][0]['final_station'].strip(),
-                                    segment['bus']['buslines'][0]['arrival_stop']['name']])
-                except KeyError:
-                    pass
+                for segment in segment_list:
+                    try:
+                        ss_plan.append([segment['bus']['buslines'][0]['departure_stop']['name'],
+                                        segment['bus']['buslines'][0]['name'],
+                                        '往' + segment['bus']['buslines'][0]['final_station'].strip(),
+                                        segment['bus']['buslines'][0]['arrival_stop']['name']])
+                    except KeyError:
+                        pass
         else:
             plantype = False
             duration = 1000000
